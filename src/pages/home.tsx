@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import { Button } from '@antmjs/vantui';
 
 import { MainNav } from '../components/MainNav';
+import { SessionBox } from '../components/SessionBox';
 import counterStore from '../store/counter';
 
 definePageConfig({
@@ -15,7 +16,7 @@ export default class HomePage extends PureComponent {
     const { counter } = counterStore;
 
     return (
-      <>
+      <SessionBox>
         <span>index</span>
 
         <Button type="primary" onClick={() => counterStore.reduceCount()}>
@@ -29,7 +30,7 @@ export default class HomePage extends PureComponent {
         </Button>
 
         <MainNav path="home" />
-      </>
+      </SessionBox>
     );
   }
 }
