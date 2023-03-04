@@ -24,7 +24,7 @@
     "@antmjs/vantui": "^2.5.1",
     "@authing/miniapp-taro": "^5.1.4",
     "@babel/runtime": "^7.20.13",
-    "@ideamall/data-model": "^1.0.0-beta.5",
+    "@ideamall/data-model": "^1.0.0-beta.6",
     "@tarojs/components": "3.6.1",
     "@tarojs/helper": "3.6.1",
     "@tarojs/plugin-framework-react": "3.6.1",

@@ -5,7 +5,7 @@ specifiers:
   '@authing/miniapp-taro': ^5.1.4
   '@babel/core': ^7.20.12
   '@babel/runtime': ^7.20.13
-  '@ideamall/data-model': ^1.0.0-beta.5
+  '@ideamall/data-model': ^1.0.0-beta.6
   '@octokit/openapi-types': ^16.0.0
   '@prefresh/babel-plugin': ^0.4.4
   '@prefresh/core': ^1.4.1
@@ -64,7 +64,7 @@ dependencies:
   '@antmjs/vantui': 2.5.1
   '@authing/miniapp-taro': 5.1.4
   '@babel/runtime': 7.20.13
-  '@ideamall/data-model': 1.0.0-beta.5_23kwxvf6v4pjplrguzcq2wnjwe
+  '@ideamall/data-model': 1.0.0-rc.0_23kwxvf6v4pjplrguzcq2wnjwe
   '@tarojs/components': 3.6.1_@types+react@18.0.28
   '@tarojs/helper': 3.6.1
   '@tarojs/plugin-framework-react': 3.6.1_cv4kvf7h3hjilvfz3wrwqzh32i
@@ -1614,12 +1614,12 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@ideamall/data-model/1.0.0-beta.5_23kwxvf6v4pjplrguzcq2wnjwe:
-    resolution: {integrity: sha512-T70dBORmpx+IM57AE//8J0yjAKGsO3dwKfU/pFqyN+uK6aVfKcmb4kQ9A2xXI/Bct0DRE7uTrZXaOrS9GMcZNA==, tarball: download/@ideamall/data-model/1.0.0-beta.5/d5b5ba3851bc3488b990e25267da1d8b2e4ad5e4}
+  /@ideamall/data-model/1.0.0-rc.0_23kwxvf6v4pjplrguzcq2wnjwe:
+    resolution: {integrity: sha512-9mUthXlBfR0LjtbR8iJfFKLwG97qs4fc1lbtoVJCsV3XS7VbZiETFfZvTHK1Y7+AXFOKztJPFbm4E9c42d358w==, tarball: download/@ideamall/data-model/1.0.0-rc.0/a9e3892d2febeef48c7b96cb8a38146e40d7a42f}
     dependencies:
       class-transformer: 0.5.1
       class-validator: 0.14.0
-      mobx-restful: 0.6.2_23kwxvf6v4pjplrguzcq2wnjwe
+      mobx-restful: 0.6.3_23kwxvf6v4pjplrguzcq2wnjwe
       reflect-metadata: 0.1.13
       tslib: 2.5.0
     transitivePeerDependencies:
@@ -9099,6 +9099,23 @@ packages:
 
   /mobx-restful/0.6.2_23kwxvf6v4pjplrguzcq2wnjwe:
     resolution: {integrity: sha512-90C/2g1sv871wbc3EJB1/1VzjmU903AdnMqaRTvqCL0D2rw2a68UJiirmFF4oygYwesl9XBHFcR0WuvXgR/WJw==}
+    peerDependencies:
+      mobx: '>=4 <6'
+    dependencies:
+      '@swc/helpers': 0.4.14
+      class-validator: 0.14.0
+      koajax: 0.8.3_typescript@4.9.5
+      mobx: 4.15.7
+      reflect-metadata: 0.1.13
+      regenerator-runtime: 0.13.11
+      web-utility: 4.0.0_typescript@4.9.5
+    transitivePeerDependencies:
+      - jsdom
+      - typescript
+    dev: false
+
+  /mobx-restful/0.6.3_23kwxvf6v4pjplrguzcq2wnjwe:
+    resolution: {integrity: sha512-y40QEXqOgvWM9Isv6lPwA4Wz9U3zmaI4wxXwJ1HX6D8gmfWOy/0Hhj5xkosOe9xh+4IRHYCLO/Po2ZeXH43jWQ==}
     peerDependencies:
       mobx: '>=4 <6'
     dependencies:
