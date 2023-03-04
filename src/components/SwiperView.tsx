@@ -1,18 +1,13 @@
 import { View } from '@tarojs/components';
 import { Swiper, SwiperItem, Image } from '@antmjs/vantui';
 import { FC, useState } from 'react';
+import { images } from '../api/home';
 
 export interface SwiperViewProps {}
 
 export const SwiperView: FC<SwiperViewProps> = () => {
   const [initPage1, setInitPage1] = useState(0);
   const onChange = e => {};
-  const images = [
-    'https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg',
-    'https://fastly.jsdelivr.net/npm/@vant/assets/apple-2.jpeg',
-    'https://fastly.jsdelivr.net/npm/@vant/assets/apple-3.jpeg',
-    'https://fastly.jsdelivr.net/npm/@vant/assets/apple-4.jpeg'
-  ];
 
   return (
     <View>
