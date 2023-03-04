@@ -32,11 +32,8 @@ export default class HomePage extends PureComponent {
         </p>
 
         <Grid gutter={10}>
-          <GridItem icon="bag-o" text="新品推荐" />
           <GridItem icon="goods-collect-o" text="新品推荐" />
           <GridItem icon="chart-trending-o" text="热销排行" />
-          <GridItem icon="bar-chart-o" text="热销排行" />
-          <GridItem icon="medal-o" text="热销排行" />
           <GridItem icon="cash-o" text="本周特惠" />
           <GridItem icon="gift-o" text="会买专辑" />
         </Grid>
