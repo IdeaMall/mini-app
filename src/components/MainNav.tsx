@@ -14,14 +14,20 @@ export const MainNav: FC<MainNavProps> = ({ path }) => (
     active={path}
     onChange={({ detail }) => redirectTo({ url: `/pages/${detail}` })}
   >
-    <TabbarItem icon="points" name="home">
-      MobX
+    <TabbarItem icon="wap-home-o" name="home">
+      首页
     </TabbarItem>
-    <TabbarItem icon="cluster-o" name="component">
-      组件
+    <TabbarItem icon="apps-o" name="component">
+      分类
     </TabbarItem>
-    <TabbarItem icon="exchange" name="interface">
-      接口
+    <TabbarItem icon="envelop-o" name="message">
+      消息
+    </TabbarItem>
+    <TabbarItem icon="shopping-cart-o" name="shopping-cart">
+      购物车
+    </TabbarItem>
+    <TabbarItem icon="user-circle-o" name="mine">
+      我的
     </TabbarItem>
   </Tabbar>
 );
