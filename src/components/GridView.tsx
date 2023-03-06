@@ -1,6 +1,7 @@
 import { Col, Icon, Row } from '@antmjs/vantui';
 import { View } from '@tarojs/components';
 import { FC } from 'react';
+
 import { descriptionItems, homeItems } from '../api/home';
 
 export const HomeGridLayout: FC = () => (
