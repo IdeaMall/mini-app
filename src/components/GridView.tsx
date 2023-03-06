@@ -38,7 +38,7 @@ export const GridView: FC<GridViewProps> = ({ items }) => {
           <div className="idea-bg-primary p-3 rounded-circle text-white m-3 mb-2">
             <Icon name={icon} style={{ fontSize: '1.5rem' }} />
           </div>
-          <span>{text}</span>
+          {text}
         </Col>
       ))}
     </Row>
