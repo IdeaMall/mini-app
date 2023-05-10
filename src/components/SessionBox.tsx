@@ -55,24 +55,24 @@ export class SessionBox extends PureComponent<SessionBoxProps> {
 
     return (
       <Dialog show showConfirmButton={false} closeOnClickOverlay={false}>
-        <div className="p-3">
+        <div className='p-3'>
           <Input
-            className="p-3"
-            placeholder="手机号"
+            className='p-3'
+            placeholder='手机号'
             onInput={({ detail }) => (this.mobilePhone = detail.value)}
           />
-          <div className="d-flex">
-            <div className="me-auto">
+          <div className='d-flex'>
+            <div className='me-auto'>
               <Input
-                className="p-3"
-                placeholder="验证码"
+                className='p-3'
+                placeholder='验证码'
                 onInput={({ detail }) => (this.code = detail.value)}
               />
             </div>
             <div>
               <Button
-                className="text-nowrap"
-                type="primary"
+                className='text-nowrap'
+                type='primary'
                 disabled={!mobilePhone || !!interval}
                 onClick={this.sendSMS}
               >
@@ -81,10 +81,10 @@ export class SessionBox extends PureComponent<SessionBoxProps> {
             </div>
           </div>
           <Button
-            className="mt-3"
+            className='mt-3'
             block
-            type="primary"
-            formType="submit"
+            type='primary'
+            formType='submit'
             disabled={!mobilePhone || !code}
             onClick={this.signIn}
           >
@@ -101,12 +101,12 @@ export class SessionBox extends PureComponent<SessionBoxProps> {
       { session } = userStore;
 
     return (
-      <div className="position-relative">
+      <div className='position-relative'>
         {(!autoCover || session) && children}
 
         {!autoCover && !session && !showDialog && (
           <div
-            className="position-absolute left-0 top-0 w-100 h-100"
+            className='position-absolute left-0 top-0 w-100 h-100'
             style={{ zIndex: 1000 }}
             onClick={this.checkSession}
           />

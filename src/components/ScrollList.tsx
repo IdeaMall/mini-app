@@ -1,8 +1,8 @@
+import { ScrollView, ScrollViewProps } from '@tarojs/components';
 import debounce from 'lodash.debounce';
 import { TranslationModel } from 'mobx-i18n';
-import { DataObject, NewData, ListModel, Stream } from 'mobx-restful';
+import { DataObject, ListModel, NewData, Stream } from 'mobx-restful';
 import { Component, ReactNode } from 'react';
-import { ScrollView, ScrollViewProps } from '@tarojs/components';
 
 export interface ScrollListProps<T extends DataObject = DataObject>
   extends Pick<ScrollViewProps, 'className' | 'style'> {
@@ -62,7 +62,7 @@ export abstract class ScrollList<
       >
         {this.renderList()}
 
-        <footer className="mt-4 text-center text-muted small">
+        <footer className='mt-4 text-center text-muted small'>
           {noMore || !allItems.length ? t('no_more') : t('load_more')}
         </footer>
       </ScrollView>

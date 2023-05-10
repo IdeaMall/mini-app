@@ -24,7 +24,7 @@
     "@antmjs/vantui": "^2.5.1",
     "@authing/miniapp-taro": "^5.1.4",
     "@babel/runtime": "^7.20.13",
-    "@ideamall/data-model": "^1.0.0-beta.5",
+    "@ideamall/data-model": "1.0.0-rc.2",
     "@tarojs/components": "3.6.1",
     "@tarojs/helper": "3.6.1",
     "@tarojs/plugin-framework-react": "3.6.1",
@@ -75,6 +75,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
@@ -83,11 +84,13 @@
     "webpack": "~5.75.0"
   },
   "prettier": {
-    "singleQuote": true,
     "trailingComma": "none",
-    "arrowParens": "avoid"
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "jsxSingleQuote": true
   },
   "lint-staged": {
-    "*.{md,js,ts,tsx,json,yml}": "prettier --write"
+    "*.{md,js,ts,tsx,json,yml}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   }
 }
