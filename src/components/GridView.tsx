@@ -21,7 +21,7 @@ export const DescriptionView: FC<DescriptionViewProps> = ({ items }) => (
   <Row className='text-center my-2'>
     {items?.map(({ icon, text }, index) => (
       <Col span={8} key={index} className='text-nowrap'>
-        <Icon name={icon} className='idea-text-yellow me-1' />
+        <Icon name={icon} className='text-warning me-1' />
         {text}
       </Col>
     ))}
@@ -35,7 +35,7 @@ export const GridView: FC<GridViewProps> = ({ items }) => {
     <Row>
       {items?.map(({ icon, text }) => (
         <Col className='text-center' key={text} span={6}>
-          <div className='idea-bg-primary p-3 rounded-circle text-white m-3 mb-2'>
+          <div className='bg-primary p-3 rounded-circle text-white m-3 mb-2'>
             <Icon name={icon} style={{ fontSize: '1.5rem' }} />
           </div>
           {text}
