@@ -6,6 +6,8 @@ on:
 jobs:
   Build-and-Deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -13,6 +15,7 @@ jobs:
       WMA_ID: ${{ secrets.WMA_ID }}
     steps:
       - uses: actions/checkout@v3
+
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -35,8 +38,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./dist
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           force_orphan: true
+
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
         if: ${{ env.VERCEL_TOKEN && env.VERCEL_ORG_ID && env.VERCEL_PROJECT_ID }}
