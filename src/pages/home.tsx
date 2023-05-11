@@ -1,10 +1,10 @@
-import { PureComponent } from 'react';
 import { observer } from 'mobx-react';
+import { PureComponent } from 'react';
 
+import { HomeGridLayout } from '../components/GridView';
 import { MainNav } from '../components/MainNav';
 import { SessionBox } from '../components/SessionBox';
 import { SwiperView } from '../components/SwiperView';
-import { HomeGridLayout } from '../components/GridView';
 
 definePageConfig({
   navigationBarTitleText: '首页'
@@ -19,7 +19,7 @@ export default class HomePage extends PureComponent {
 
         <HomeGridLayout />
 
-        <MainNav path="home" />
+        <MainNav path='home' />
       </SessionBox>
     );
   }

@@ -1,6 +1,6 @@
-import queryString from 'query-string';
-import { ListModel } from 'mobx-restful';
 import { components } from '@octokit/openapi-types';
+import { ListModel } from 'mobx-restful';
+import queryString from 'query-string';
 
 import { client } from './service';
 
