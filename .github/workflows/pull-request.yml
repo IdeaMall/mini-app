@@ -14,7 +14,6 @@ jobs:
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
       - uses: actions/checkout@v3
-      - run: echo ${{ secrets.NPM_RC }} > .npmrc
 
       - uses: pnpm/action-setup@v2
         if: ${{ !env.VERCEL_TOKEN || !env.VERCEL_ORG_ID || !env.VERCEL_PROJECT_ID }}
@@ -27,7 +26,9 @@ jobs:
           cache: pnpm
       - name: Install Dependencies
         if: ${{ !env.VERCEL_TOKEN || !env.VERCEL_ORG_ID || !env.VERCEL_PROJECT_ID }}
-        run: pnpm i --frozen-lockfile
+        run: |
+          echo ${{ secrets.NPM_RC }} > .npmrc
+          pnpm i --frozen-lockfile
 
       - name: Build HTML 5 version
         if: ${{ !env.VERCEL_TOKEN || !env.VERCEL_ORG_ID || !env.VERCEL_PROJECT_ID }}
