@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         if: ${{ !env.VERCEL_TOKEN || !env.VERCEL_ORG_ID || !env.VERCEL_PROJECT_ID }}
         run: |
-          echo ${{ secrets.NPM_RC }} > .npmrc
+          echo '${{ secrets.NPM_RC }}' > .npmrc
           pnpm i --frozen-lockfile
 
       - name: Build HTML 5 version

@@ -22,7 +22,7 @@ jobs:
           cache: pnpm
       - name: Install Dependencies
         run: |
-          echo ${{ secrets.NPM_RC }} >> .npmrc
+          echo '${{ secrets.NPM_RC }}' >> .npmrc
           pnpm i --frozen-lockfile
 
       - name: Build HTML 5 version
