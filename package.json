@@ -75,6 +75,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
@@ -83,11 +84,13 @@
     "webpack": "~5.82.0"
   },
   "prettier": {
-    "singleQuote": true,
     "trailingComma": "none",
-    "arrowParens": "avoid"
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "jsxSingleQuote": true
   },
   "lint-staged": {
-    "*.{md,js,ts,tsx,json,yml}": "prettier --write"
+    "*.{md,js,ts,tsx,json,yml}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   }
 }

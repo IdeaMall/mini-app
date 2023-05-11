@@ -1,9 +1,9 @@
-import { PureComponent } from 'react';
 import { CellGroup, Form } from '@antmjs/vantui';
+import { PureComponent } from 'react';
 
+import { AreaSelect } from '../components/AreaSelect';
 import { MainNav } from '../components/MainNav';
 import { RangeField } from '../components/RangeField';
-import { AreaSelect } from '../components/AreaSelect';
 
 definePageConfig({
   navigationBarTitleText: '高级组件演示'
@@ -25,25 +25,25 @@ export default class ComponentPage extends PureComponent<{}, State> {
     return (
       <div>
         <Form>
-          <CellGroup title="高级控件">
+          <CellGroup title='高级控件'>
             <RangeField
-              title="范围"
-              unit="mm"
-              name="range"
+              title='范围'
+              unit='mm'
+              name='range'
               max={100}
               value={range}
               onChange={({ detail }) => this.setState({ range: detail })}
             />
             <AreaSelect
-              title="所在地"
-              name="area"
+              title='所在地'
+              name='area'
               value={areaCode}
               onChange={areaCode => this.setState({ areaCode })}
             />
           </CellGroup>
         </Form>
 
-        <MainNav path="component" />
+        <MainNav path='component' />
       </div>
     );
   }

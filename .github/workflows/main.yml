@@ -7,6 +7,9 @@ jobs:
   Build-and-Deploy:
     runs-on: ubuntu-latest
     env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
       WMA_ID: ${{ secrets.WMA_ID }}
     steps:
       - uses: actions/checkout@v3
@@ -18,7 +21,9 @@ jobs:
           node-version: 16
           cache: pnpm
       - name: Install Dependencies
-        run: pnpm i --frozen-lockfile
+        run: |
+          echo '${{ secrets.NPM_RC }}' >> .npmrc
+          pnpm i --frozen-lockfile
 
       - name: Build HTML 5 version
         if: ${{ !env.WMA_ID }}

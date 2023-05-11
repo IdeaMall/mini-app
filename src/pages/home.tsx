@@ -1,6 +1,6 @@
-import { PureComponent } from 'react';
-import { observer } from 'mobx-react';
 import { Button } from '@antmjs/vantui';
+import { observer } from 'mobx-react';
+import { PureComponent } from 'react';
 
 import { MainNav } from '../components/MainNav';
 import { SessionBox } from '../components/SessionBox';
@@ -19,17 +19,17 @@ export default class HomePage extends PureComponent {
       <SessionBox>
         <span>index</span>
 
-        <Button type="primary" onClick={() => counterStore.reduceCount()}>
+        <Button type='primary' onClick={() => counterStore.reduceCount()}>
           -
         </Button>
 
         <span>{counter}</span>
 
-        <Button type="primary" onClick={() => counterStore.addCount()}>
+        <Button type='primary' onClick={() => counterStore.addCount()}>
           +
         </Button>
 
-        <MainNav path="home" />
+        <MainNav path='home' />
       </SessionBox>
     );
   }

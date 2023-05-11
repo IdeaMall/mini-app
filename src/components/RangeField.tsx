@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { Row, Col, FormItem, Slider } from '@antmjs/vantui';
+import { Col, FormItem, Row, Slider } from '@antmjs/vantui';
 import { FormItemProps } from '@antmjs/vantui/types/form';
 import { SliderProps } from '@antmjs/vantui/types/slider';
+import { FC } from 'react';
 
 export interface RangeFieldProps
   extends Pick<FormItemProps, 'name' | 'required' | 'rules'>,
@@ -27,7 +27,7 @@ export const RangeField: FC<RangeFieldProps> = ({
     </FormItem>
 
     <Row>
-      <Col span="14" offset="8" className="py-3">
+      <Col span='14' offset='8' className='py-3'>
         <Slider range value={value} {...rest} />
       </Col>
     </Row>
