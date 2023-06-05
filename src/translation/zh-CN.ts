@@ -4,6 +4,6 @@ export default {
   home: '首页',
   category: '分类',
   message: '消息',
-  shopping_cart: '购物车',
+  cart: '购物车',
   mine: '我的'
 } as const;

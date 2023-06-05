@@ -1,5 +1,6 @@
 import { Tabbar, TabbarItem } from '@antmjs/vantui';
 import { redirectTo } from '@tarojs/taro';
+import { observer } from 'mobx-react';
 import { FC } from 'react';
 
 import { i18n } from '../store/Translation';
@@ -10,7 +11,7 @@ export interface MainNavProps {
 
 const { t } = i18n;
 
-export const MainNav: FC<MainNavProps> = ({ path }) => (
+export const MainNav: FC<MainNavProps> = observer(({ path }) => (
   <Tabbar
     border
     fixed
@@ -28,10 +29,10 @@ export const MainNav: FC<MainNavProps> = ({ path }) => (
       {t('message')}
     </TabbarItem>
     <TabbarItem icon='shopping-cart-o' name='shopping-cart'>
-      {t('shopping_cart')}
+      {t('cart')}
     </TabbarItem>
     <TabbarItem icon='user-circle-o' name='mine'>
       {t('mine')}
     </TabbarItem>
   </Tabbar>
-);
+));

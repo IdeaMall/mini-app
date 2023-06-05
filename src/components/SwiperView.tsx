@@ -1,6 +1,5 @@
 import { Image, Swiper, SwiperItem } from '@antmjs/vantui';
 import { SwiperProps } from '@antmjs/vantui/types/swiper';
-import { View } from '@tarojs/components';
 import { FC } from 'react';
 
 type PartialSwiperProps = 'height' | 'autoPlay' | 'initPage';
@@ -16,20 +15,18 @@ export const SwiperView: FC<SwiperViewProps> = ({
   initPage = 0,
   ...props
 }) => (
-  <View>
-    <Swiper
-      paginationColor='#426543'
-      paginationVisible
-      height={height}
-      autoPlay={autoPlay}
-      initPage={initPage}
-      {...props}
-    >
-      {images.map((item, index) => (
-        <SwiperItem key={`swiper#home#${index}`}>
-          <Image className='w-100 h-100' fit='cover' src={item} />
-        </SwiperItem>
-      ))}
-    </Swiper>
-  </View>
+  <Swiper
+    paginationColor='#426543'
+    paginationVisible
+    height={height}
+    autoPlay={autoPlay}
+    initPage={initPage}
+    {...props}
+  >
+    {images.map((item, index) => (
+      <SwiperItem key={`swiper#home#${index}`}>
+        <Image className='w-100 h-100' fit='cover' src={item} />
+      </SwiperItem>
+    ))}
+  </Swiper>
 );

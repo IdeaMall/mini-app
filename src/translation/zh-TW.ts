@@ -4,6 +4,6 @@ export default {
   home: '首頁',
   category: '分類',
   message: '消息',
-  shopping_cart: '購物車',
+  cart: '購物車',
   mine: '我的'
 } as const;
