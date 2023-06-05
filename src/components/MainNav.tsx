@@ -2,9 +2,13 @@ import { Tabbar, TabbarItem } from '@antmjs/vantui';
 import { redirectTo } from '@tarojs/taro';
 import { FC } from 'react';
 
+import { i18n } from '../store/Translation';
+
 export interface MainNavProps {
   path: string;
 }
+
+const { t } = i18n;
 
 export const MainNav: FC<MainNavProps> = ({ path }) => (
   <Tabbar
@@ -15,19 +19,19 @@ export const MainNav: FC<MainNavProps> = ({ path }) => (
     onChange={({ detail }) => redirectTo({ url: `/pages/${detail}` })}
   >
     <TabbarItem icon='wap-home-o' name='home'>
-      首页
+      {t('home')}
     </TabbarItem>
     <TabbarItem icon='apps-o' name='component'>
-      分类
+      {t('category')}
     </TabbarItem>
     <TabbarItem icon='envelop-o' name='message'>
-      消息
+      {t('message')}
     </TabbarItem>
     <TabbarItem icon='shopping-cart-o' name='shopping-cart'>
-      购物车
+      {t('shopping_cart')}
     </TabbarItem>
     <TabbarItem icon='user-circle-o' name='mine'>
-      我的
+      {t('mine')}
     </TabbarItem>
   </Tabbar>
 );

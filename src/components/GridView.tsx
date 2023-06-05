@@ -1,7 +1,6 @@
 import { Col, Icon, Row } from '@antmjs/vantui';
 import { FC } from 'react';
-
-export type IconText = Record<'icon' | 'text', string>;
+import { IconText } from 'src/api/home';
 
 export type Icons = Partial<Record<'items', IconText[]>>;
 
