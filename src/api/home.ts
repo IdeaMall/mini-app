@@ -10,15 +10,15 @@ export type IconText = Record<'icon' | 'text', string>;
 export const descriptionItems: IconText[] = [
   {
     icon: 'certificate',
-    text: '质量保证'
+    text: '官方商城'
   },
   {
-    icon: 'logistics',
-    text: '快速核对需求'
+    icon: 'certificate',
+    text: '正品保障'
   },
   {
-    icon: 'exchange',
-    text: '后期运维'
+    icon: 'certificate',
+    text: '售后无忧'
   }
 ];
 
