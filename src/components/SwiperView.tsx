@@ -18,13 +18,11 @@ export const SwiperView: FC<SwiperViewProps> = ({
   <Swiper
     paginationColor='#426543'
     paginationVisible
-    height={height}
-    autoPlay={autoPlay}
-    initPage={initPage}
+    {...{ height, autoPlay, initPage }}
     {...props}
   >
-    {images.map((item, index) => (
-      <SwiperItem key={`swiper#home#${index}`}>
+    {images.map(item => (
+      <SwiperItem key={item}>
         <Image className='w-100 h-100' fit='cover' src={item} />
       </SwiperItem>
     ))}
