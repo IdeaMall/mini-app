@@ -27,7 +27,7 @@ export const SwiperView: FC<SwiperViewProps> = ({
     >
       {images.map((item, index) => (
         <SwiperItem key={`swiper#home#${index}`}>
-          <Image src={item} fit='cover' width='100%' height='200px' />
+          <Image className='w-100 h-100' fit='cover' src={item} />
         </SwiperItem>
       ))}
     </Swiper>

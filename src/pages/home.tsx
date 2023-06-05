@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react';
 import { PureComponent } from 'react';
 
-import { images } from '../api/home';
-import { HomeGridLayout } from '../components/GridView';
+import { descriptionItems, homeItems, images } from '../api/home';
+import { DescriptionView, GridView } from '../components/GridView';
 import { MainNav } from '../components/MainNav';
 import { SwiperView } from '../components/SwiperView';
 
@@ -17,7 +17,8 @@ export default class HomePage extends PureComponent {
       <>
         <SwiperView images={images} />
 
-        <HomeGridLayout />
+        <DescriptionView items={descriptionItems} />
+        <GridView items={homeItems} />
 
         <MainNav path='home' />
       </>
