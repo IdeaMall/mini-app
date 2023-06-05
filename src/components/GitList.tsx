@@ -1,9 +1,9 @@
-import { Cell,CellGroup } from '@antmjs/vantui';
+import { Cell, CellGroup } from '@antmjs/vantui';
 import { observer } from 'mobx-react';
 
 import repositoryStore, { Repository } from '../store/Repository';
 import { i18n } from '../store/Translation';
-import { ScrollList,ScrollListProps } from './ScrollList';
+import { ScrollList, ScrollListProps } from './ScrollList';
 
 export type GitListProps = ScrollListProps<Repository>;
 

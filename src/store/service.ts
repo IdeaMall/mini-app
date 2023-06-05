@@ -3,7 +3,8 @@ import {
   request as call,
   setStorageSync,
   showModal,
-  uploadFile} from '@tarojs/taro';
+  uploadFile
+} from '@tarojs/taro';
 import { ClientOptions, Request, RequestOptions, Response } from 'koajax';
 import { BaseListModel } from 'mobx-restful';
 

@@ -1,12 +1,17 @@
 import { Tabbar, TabbarItem } from '@antmjs/vantui';
 import { redirectTo } from '@tarojs/taro';
+import { observer } from 'mobx-react';
 import { FC } from 'react';
+
+import { i18n } from '../store/Translation';
 
 export interface MainNavProps {
   path: string;
 }
 
-export const MainNav: FC<MainNavProps> = ({ path }) => (
+const { t } = i18n;
+
+export const MainNav: FC<MainNavProps> = observer(({ path }) => (
   <Tabbar
     border
     fixed
@@ -14,14 +19,20 @@ export const MainNav: FC<MainNavProps> = ({ path }) => (
     active={path}
     onChange={({ detail }) => redirectTo({ url: `/pages/${detail}` })}
   >
-    <TabbarItem icon='points' name='home'>
-      MobX
+    <TabbarItem icon='wap-home-o' name='home'>
+      {t('home')}
     </TabbarItem>
-    <TabbarItem icon='cluster-o' name='component'>
-      组件
+    <TabbarItem icon='apps-o' name='component'>
+      {t('category')}
     </TabbarItem>
-    <TabbarItem icon='exchange' name='interface'>
-      接口
+    <TabbarItem icon='envelop-o' name='message'>
+      {t('message')}
+    </TabbarItem>
+    <TabbarItem icon='shopping-cart-o' name='shopping-cart'>
+      {t('cart')}
+    </TabbarItem>
+    <TabbarItem icon='user-circle-o' name='mine'>
+      {t('mine')}
     </TabbarItem>
   </Tabbar>
-);
+));

@@ -1,10 +1,10 @@
-import { Button } from '@antmjs/vantui';
+import { Col, Icon, Row } from '@antmjs/vantui';
 import { observer } from 'mobx-react';
 import { PureComponent } from 'react';
 
+import { descriptionItems, homeItems, images } from '../api/home';
 import { MainNav } from '../components/MainNav';
-import { SessionBox } from '../components/SessionBox';
-import counterStore from '../store/counter';
+import { SwiperView } from '../components/SwiperView';
 
 definePageConfig({
   navigationBarTitleText: '首页'
@@ -13,24 +13,32 @@ definePageConfig({
 @observer
 export default class HomePage extends PureComponent {
   render() {
-    const { counter } = counterStore;
-
     return (
-      <SessionBox>
-        <span>index</span>
+      <>
+        <SwiperView images={images} />
 
-        <Button type='primary' onClick={() => counterStore.reduceCount()}>
-          -
-        </Button>
+        <Row className='text-center my-2'>
+          {descriptionItems.map(({ icon, text }) => (
+            <Col span={8} key={text} className='text-nowrap'>
+              <Icon name={icon} className='text-warning me-1' />
+              {text}
+            </Col>
+          ))}
+        </Row>
 
-        <span>{counter}</span>
-
-        <Button type='primary' onClick={() => counterStore.addCount()}>
-          +
-        </Button>
+        <Row>
+          {homeItems?.map(({ icon, text }) => (
+            <Col className='text-center' key={text} span={6}>
+              <div className='bg-primary p-3 rounded-circle text-white m-3 mb-2'>
+                <Icon name={icon} style={{ fontSize: '1.5rem' }} />
+              </div>
+              {text}
+            </Col>
+          ))}
+        </Row>
 
         <MainNav path='home' />
-      </SessionBox>
+      </>
     );
   }
 }
