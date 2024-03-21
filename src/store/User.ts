@@ -1,5 +1,5 @@
 import { Authing } from '@authing/miniapp-taro';
-import { UserOutput } from '@ideamall/data-model';
+import { User } from '@ideamall/data-service';
 import { clearStorageSync, getStorageSync, setStorageSync } from '@tarojs/taro';
 import { observable } from 'mobx';
 import { toggle } from 'mobx-restful';
@@ -13,11 +13,11 @@ const authing = new Authing({
   appId: '63e3b2a04bc21d57a5f3edc1'
 });
 
-export class UserModel extends TableModel<UserOutput> {
+export class UserModel extends TableModel<User> {
   baseURI = 'user';
 
   @observable
-  session?: UserOutput = getStorageSync('session');
+  session?: User = getStorageSync('session');
 
   client = new HTTPClient({
     baseURI:
@@ -27,7 +27,7 @@ export class UserModel extends TableModel<UserOutput> {
     responseType: 'json'
   });
 
-  saveSession(user: UserOutput) {
+  saveSession(user: User) {
     this.client.token = user.token!;
 
     setStorageSync('session', user);
@@ -44,7 +44,7 @@ export class UserModel extends TableModel<UserOutput> {
 
   @toggle('uploading')
   async signInAuthing(token: string) {
-    const { body } = await this.client.post<UserOutput>(
+    const { body } = await this.client.post<User>(
       `${this.baseURI}/session/authing`,
       {},
       { Authorization: `Bearer ${token}` }

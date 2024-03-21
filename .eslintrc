@@ -2,10 +2,10 @@
   "extends": ["taro/react"],
   "plugins": ["simple-import-sort"],
   "rules": {
-    "@typescript-eslint/no-shadow": "off",
     "import/first": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-shadow": "off",
     "react/sort-comp": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
