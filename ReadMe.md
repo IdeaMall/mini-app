@@ -34,11 +34,15 @@ https://ideamall.github.io/mini-app/
 
 ```shell
 npm i pnpm -g
-npm set strict-peer-dependencies=false
-
 pnpm i
+```
+
+### Start Dev-server
+
+```shell
 pnpm dev h5
-# pnpm dev weapp
+# or
+pnpm dev weapp
 ```
 
 ### Mini-app Debug
@@ -63,7 +67,8 @@ brew install --cask wechatwebdevtools
 
 ```shell
 pnpm build h5
-# pnpm build weapp
+# or
+pnpm build weapp
 ```
 
 [1]: https://taro-docs.jd.com/
