@@ -1,0 +1,1 @@
+"use strict";(self.webpackJsonp=self.webpackJsonp||[]).push([[377],{"7377":function(e,o,a){a.r(o),o.default={"load_more":"Load more...","no_more":"No more","home":"Home","category":"Category","message":"Message","cart":"Cart","mine":"Mine"}}}]);
