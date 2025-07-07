@@ -4,7 +4,7 @@ import { FormItemProps } from '@antmjs/vantui/types/form';
 import { areaList } from '@vant/area-data';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
-import { PureComponent } from 'react';
+import { Component, KeyboardEvent } from 'react';
 
 export type Area = Record<'name' | 'code', string>;
 
@@ -15,9 +15,9 @@ export interface AreaSelectProps
 }
 
 @observer
-export class AreaSelect extends PureComponent<AreaSelectProps> {
+export class AreaSelect extends Component<AreaSelectProps> {
   @observable
-  show = false;
+  accessor show = false;
 
   AreaMap = {
     ...areaList.province_list,
@@ -48,6 +48,14 @@ export class AreaSelect extends PureComponent<AreaSelectProps> {
 
   close = () => (this.show = false);
 
+  handleKeyDown = (event: KeyboardEvent<HTMLSpanElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+
+      this.show = true;
+    }
+  };
+
   change: AreaProps['onConfirm'] = ({ detail: { value } }) => {
     this.close();
 
@@ -61,9 +69,13 @@ export class AreaSelect extends PureComponent<AreaSelectProps> {
     return (
       <>
         <FormItem label={title} name={name}>
-          <span onClick={() => (this.show = true)}>
+          <button
+            tabIndex={0}
+            onClick={() => (this.show = true)}
+            onKeyDown={this.handleKeyDown}
+          >
             {nameValue || '请选择地区'}
-          </span>
+          </button>
         </FormItem>
 
         <Popup

@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "taro-vant-mobx-ts",
+  "projectname": "ideashop-miniapp",
   "appid": "touristappid",
   "setting": {
     "es6": false,

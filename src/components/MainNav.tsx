@@ -25,7 +25,7 @@ export const MainNav: FC<MainNavProps> = observer(({ path }) => (
     <TabbarItem icon='apps-o' name='component'>
       {t('category')}
     </TabbarItem>
-    <TabbarItem icon='envelop-o' name='message'>
+    <TabbarItem icon='envelop-o' name='interface'>
       {t('message')}
     </TabbarItem>
     <TabbarItem icon='shopping-cart-o' name='shopping-cart'>
