@@ -1,8 +1,8 @@
-# Taro-Vant-MobX-ts
+# IdeaShop-miniapp
 
 [Taro][1] project scaffold based on [TypeScript][2], [Preact][3], [MobX][4] & [Vant][5]
 
-[![CI & CD](https://github.com/IdeaMall/mini-app/actions/workflows/main.yml/badge.svg)][6]
+[![CI & CD](https://github.com/IdeaMall/IdeaShop-miniapp/actions/workflows/main.yml/badge.svg)][6]
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)][7]
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][8]
@@ -27,7 +27,6 @@ https://ideamall.github.io/mini-app/
 ## Best practice
 
 1.  Install GitHub apps in your organization or account:
-
     1.  [Probot settings][12]: set up Issue labels & Pull Request rules
     2.  [PR badge][13]: set up Online [VS Code][14] editor entries in Pull Request description
 
@@ -95,9 +94,9 @@ pnpm build weapp
 [3]: https://preactjs.com/
 [4]: https://github.com/mobxjs/mobx/blob/mobx4and5/docs/
 [5]: https://antmjs.github.io/vantui/
-[6]: https://github.com/IdeaMall/mini-app/actions/workflows/main.yml
-[7]: https://codespaces.new/IdeaMall/mini-app
-[8]: https://gitpod.io/?autostart=true#https://github.com/IdeaMall/mini-app
+[6]: https://github.com/IdeaMall/IdeaShop-miniapp/actions/workflows/main.yml
+[7]: https://codespaces.new/IdeaMall/IdeaShop-miniapp
+[8]: https://gitpod.io/?autostart=true#https://github.com/IdeaMall/IdeaShop-miniapp
 [9]: https://tw.icebreaker.top/docs/quick-start/v4/taro-webpack
 [10]: https://github.com/features/actions
 [11]: https://pages.github.com/
@@ -106,7 +105,7 @@ pnpm build weapp
 [14]: https://code.visualstudio.com/
 [15]: https://github.com/new?template_name=mini-app&template_owner=IdeaMall
 [16]: https://github.com/idea2app/Taro-Vant-MobX-ts/blob/a25e770ae6b405eb1b152cec2f17f354c00be9fb/.github/workflows/main.yml#L12-L15
-[17]: https://github.com/IdeaMall/mini-app/settings/secrets/actions
+[17]: https://github.com/IdeaMall/IdeaShop-miniapp/settings/secrets/actions
 [18]: https://github.com/idea2app/Lark-Next-Bootstrap-ts/blob/afa51fad3b16e598bf3b10010b2dc47405b016a3/.github/workflows/main.yml#L31-L60
-[19]: https://github.com/IdeaMall/mini-app/issues/new/choose
-[20]: https://github.com/IdeaMall/mini-app/projects
+[19]: https://github.com/IdeaMall/IdeaShop-miniapp/issues/new/choose
+[20]: https://github.com/IdeaMall/IdeaShop-miniapp/projects

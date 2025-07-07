@@ -1,6 +1,6 @@
 import { Col, Icon, Row } from '@antmjs/vantui';
 import { observer } from 'mobx-react';
-import { PureComponent } from 'react';
+import { Component } from 'react';
 
 import { descriptionItems, homeItems, images } from '../api/home';
 import { MainNav } from '../components/MainNav';
@@ -11,7 +11,7 @@ definePageConfig({
 });
 
 @observer
-export default class HomePage extends PureComponent {
+export default class HomePage extends Component {
   render() {
     return (
       <>
@@ -19,7 +19,7 @@ export default class HomePage extends PureComponent {
 
         <Row className='text-center my-2'>
           {descriptionItems.map(({ icon, text }) => (
-            <Col span={8} key={text} className='text-nowrap'>
+            <Col key={text} span={8} className='text-nowrap'>
               <Icon name={icon} className='text-warning me-1' />
               {text}
             </Col>
@@ -28,7 +28,7 @@ export default class HomePage extends PureComponent {
 
         <Row>
           {homeItems?.map(({ icon, text }) => (
-            <Col className='text-center' key={text} span={6}>
+            <Col key={text} className='text-center' span={6}>
               <div className='bg-primary p-3 rounded-circle text-white m-3 mb-2'>
                 <Icon name={icon} style={{ fontSize: '1.5rem' }} />
               </div>
